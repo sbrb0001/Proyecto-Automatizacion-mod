@@ -1,0 +1,132 @@
+/* styles.css */
+
+nav a {
+    color: #201a1a;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header, footer {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 10px;
+  text-align: center;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+  min-height: 80vh;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+pre {
+  background-color: #eef;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+form input {
+  padding: 8px;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #333;
+  color: #030303;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #a8a2a8;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+li a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  margin: 0;
+}
+
+.custom-link {
+  font-weight: bold;
+  color: #000000;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.custom-link:hover {
+  color: #ff0000;
+  text-decoration: underline; 
+}
+
+.custom-link[href="{{ url_for('logout') }}"] {
+  color: #ff0000; 
+  text-shadow: 1px 1px 4px rgba(255, 0, 0, 0.7);
+}
+
+.custom-link[href="{{ url_for('logout') }}"]:hover {
+  color: #ff0000;
+  font-size: 1.1rem;
+}

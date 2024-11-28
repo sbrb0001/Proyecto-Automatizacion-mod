@@ -1,0 +1,19 @@
+<!-- templates/add_vlan.html -->
+{% extends "base.html" %}
+
+{% block title %}Agregar VLAN - Gestión de VLANs{% endblock %}
+
+{% block content %}
+<h2>Agregar Nueva VLAN</h2>
+<form method="post">
+    <div class="mb-3">
+        <label for="vlan_id" class="form-label">ID de VLAN</label>
+        <input type="number" class="form-control" id="vlan_id" name="vlan_id" placeholder="Ejemplo: 65" required>
+    </div>
+    <div class="mb-3">
+        <label for="vlan_name" class="form-label">Nombre de VLAN</label>
+        <input type="text" class="form-control" id="vlan_name" name="vlan_name" placeholder="Ejemplo: Marketing" required>
+    </div>
+    <button type="submit" class="btn btn-success"><i class="bi bi-plus-circle"></i> Agregar VLAN</button>
+</form>
+{% endblock %}

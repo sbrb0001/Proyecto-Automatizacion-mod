@@ -1,0 +1,186 @@
+2024-11-27 20:49:12,692 -  nornir.core -     INFO -        run() - Running task 'Asignar VLAN 74 al puerto Ethernet0/1' with args {'config_commands': ['interface Ethernet0/1', 'switchport mode access', 'switchport access vlan 74', 'no shutdown', 'exit']} on 2 hosts
+2024-11-27 20:49:15,433 - nornir.core.task -    ERROR -      start() - Host 'S18-Nelson': task 'Asignar VLAN 74 al puerto Ethernet0/1' failed with traceback:
+Traceback (most recent call last):
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/base_connection.py", line 1122, in establish_connection
+    self.remote_conn = telnetlib.Telnet(  # type: ignore
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/_telnetlib/telnetlib.py", line 222, in __init__
+    self.open(host, port, timeout)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/_telnetlib/telnetlib.py", line 239, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/lib/python3.10/socket.py", line 824, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+2024-11-27 20:49:20,135 - nornir.core.task -    ERROR -      start() - Host 'S19-Scarlett': task 'Asignar VLAN 74 al puerto Ethernet0/1' failed with traceback:
+Traceback (most recent call last):
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/base_connection.py", line 1122, in establish_connection
+    self.remote_conn = telnetlib.Telnet(  # type: ignore
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/_telnetlib/telnetlib.py", line 222, in __init__
+    self.open(host, port, timeout)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/_telnetlib/telnetlib.py", line 239, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/lib/python3.10/socket.py", line 824, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+2024-11-27 20:49:20,136 -  nornir.core -  WARNING -        run() - Task 'Guardar configuración' has not been run – 0 hosts selected
+2024-11-28 19:04:02,916 -  nornir.core -     INFO -        run() - Running task 'Asignar VLAN 74 al puerto Ethernet0/1' with args {'config_commands': ['interface Ethernet0/1', 'switchport mode access', 'switchport access vlan 74', 'no shutdown', 'exit']} on 2 hosts
+2024-11-28 19:04:05,522 - nornir.core.task -    ERROR -      start() - Host 'S18-Nelson': task 'Asignar VLAN 74 al puerto Ethernet0/1' failed with traceback:
+Traceback (most recent call last):
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/base_connection.py", line 1122, in establish_connection
+    self.remote_conn = telnetlib.Telnet(  # type: ignore
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/_telnetlib/telnetlib.py", line 222, in __init__
+    self.open(host, port, timeout)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/_telnetlib/telnetlib.py", line 239, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/lib/python3.10/socket.py", line 824, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+2024-11-28 19:04:07,834 - nornir.core.task -    ERROR -      start() - Host 'S19-Scarlett': task 'Asignar VLAN 74 al puerto Ethernet0/1' failed with traceback:
+Traceback (most recent call last):
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/base_connection.py", line 1122, in establish_connection
+    self.remote_conn = telnetlib.Telnet(  # type: ignore
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/_telnetlib/telnetlib.py", line 222, in __init__
+    self.open(host, port, timeout)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/_telnetlib/telnetlib.py", line 239, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/lib/python3.10/socket.py", line 824, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+2024-11-28 19:04:07,835 -  nornir.core -  WARNING -        run() - Task 'Guardar configuración' has not been run – 0 hosts selected
+2024-11-28 19:06:42,169 -  nornir.core -     INFO -        run() - Running task 'Asignar VLAN 74 al puerto Ethernet0/1' with args {'config_commands': ['interface Ethernet0/1', 'switchport mode access', 'switchport access vlan 74', 'no shutdown', 'exit']} on 2 hosts
+2024-11-28 19:06:44,375 - nornir.core.task -    ERROR -      start() - Host 'S18-Nelson': task 'Asignar VLAN 74 al puerto Ethernet0/1' failed with traceback:
+Traceback (most recent call last):
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/base_connection.py", line 1122, in establish_connection
+    self.remote_conn = telnetlib.Telnet(  # type: ignore
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/_telnetlib/telnetlib.py", line 222, in __init__
+    self.open(host, port, timeout)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/_telnetlib/telnetlib.py", line 239, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/lib/python3.10/socket.py", line 824, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+2024-11-28 19:06:46,518 - nornir.core.task -    ERROR -      start() - Host 'S19-Scarlett': task 'Asignar VLAN 74 al puerto Ethernet0/1' failed with traceback:
+Traceback (most recent call last):
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir_netmiko/tasks/netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/nornir_netmiko/connections/netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/ssh_dispatcher.py", line 401, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/base_connection.py", line 490, in __init__
+    self._open()
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/base_connection.py", line 495, in _open
+    self.establish_connection()
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/base_connection.py", line 1122, in establish_connection
+    self.remote_conn = telnetlib.Telnet(  # type: ignore
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/_telnetlib/telnetlib.py", line 222, in __init__
+    self.open(host, port, timeout)
+  File "/home/scarlerodriguezb/.local/lib/python3.10/site-packages/netmiko/_telnetlib/telnetlib.py", line 239, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/lib/python3.10/socket.py", line 824, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+2024-11-28 19:06:46,519 -  nornir.core -  WARNING -        run() - Task 'Guardar configuración' has not been run – 0 hosts selected

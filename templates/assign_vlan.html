@@ -1,0 +1,64 @@
+<!-- templates/assign_vlan.html -->
+
+{% extends "base.html" %}
+
+{% block title %}Asignar VLAN - Gestión de VLANs{% endblock %}
+
+{% block content %}
+<h2>Asignar VLAN a Puerto en Modo Acceso</h2>
+<form method="post" class="needs-validation" novalidate>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <label for="vlan_id" class="form-label">ID de VLAN</label>
+            <input type="number" class="form-control" id="vlan_id" name="vlan_id" placeholder="Ejemplo: 65" min="1" max="4094" required>
+            <div class="invalid-feedback">
+                Por favor, ingresa un ID de VLAN válido entre 1 y 4094.
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="switch" class="form-label">Selecciona el Switch</label>
+            <select class="form-select" id="switch" name="switch" required>
+                <option value="" disabled selected>--Selecciona el Switch--</option>
+                {% for switch in switches %}
+                    <option value="{{ switch.name }}">{{ switch.hostname }}</option>
+                {% endfor %}
+            </select>
+            <div class="invalid-feedback">
+                Por favor, selecciona un switch.
+            </div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="port" class="form-label">Selecciona el Puerto</label>
+        <select class="form-select" id="port" name="port" required>
+            <option value="" disabled selected>--Selecciona el Puerto--</option>
+            {% for port in ['Ethernet0/0', 'Ethernet0/1', 'Ethernet0/2', 'Ethernet0/3'] %}
+                <option value="{{ port }}">{{ port }}</option>
+            {% endfor %}
+        </select>
+        <div class="invalid-feedback">
+            Por favor, selecciona un puerto.
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary"><i class="bi bi-check-circle"></i> Asignar VLAN</button>
+</form>
+{% endblock %}
+
+{% block scripts %}
+<script>
+(function () {
+  'use strict';
+  var forms = document.querySelectorAll('.needs-validation');
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+})();
+</script>
+{% endblock %}

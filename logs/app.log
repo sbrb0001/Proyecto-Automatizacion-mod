@@ -1,0 +1,802 @@
+2024-11-19 15:33:23,344 INFO: Aplicación iniciada
+2024-11-19 15:37:33,622 INFO: Aplicación iniciada
+2024-11-19 15:38:16,126 INFO: Aplicación iniciada
+2024-11-19 15:38:16,362 INFO: Aplicación iniciada
+2024-11-19 15:38:31,193 INFO: Aplicación iniciada
+2024-11-19 15:38:31,339 INFO: Aplicación iniciada
+2024-11-19 15:38:39,597 INFO: Aplicación iniciada
+2024-11-19 15:38:39,745 INFO: Aplicación iniciada
+2024-11-19 15:42:27,992 INFO: Aplicación iniciada
+2024-11-19 15:42:41,100 INFO: Aplicación iniciada
+2024-11-19 15:42:41,297 INFO: Aplicación iniciada
+2024-11-19 15:44:11,815 INFO: Aplicación iniciada
+2024-11-19 15:44:38,090 INFO: Aplicación iniciada
+2024-11-19 15:45:02,772 INFO: Aplicación iniciada
+2024-11-19 15:45:05,753 INFO: Aplicación iniciada
+2024-11-19 15:45:23,124 INFO: Aplicación iniciada
+2024-11-19 15:47:28,720 INFO: Aplicación iniciada
+2024-11-19 15:54:22,803 INFO: Aplicación iniciada
+2024-11-19 15:54:22,963 INFO: Aplicación iniciada
+2024-11-19 15:55:46,023 INFO: Enviando comandos al switch 192.168.100.121: ['interface Et0/0', 'switchport mode trunk', 'switchport trunk allowed vlan add 65', 'exit']
+2024-11-19 15:55:47,198 INFO: VLAN 65 asignada al puerto Et0/0 en switch 192.168.100.121
+2024-11-19 15:58:50,086 INFO: Aplicación iniciada
+2024-11-19 15:59:14,053 INFO: Aplicación iniciada
+2024-11-19 15:59:14,195 INFO: Aplicación iniciada
+2024-11-19 15:59:34,519 INFO: Enviando comandos al switch 192.168.100.121: ['interface Et0/0', 'switchport mode access', 'switchport access vlan 65', 'no shutdown', 'exit']
+2024-11-19 15:59:35,415 DEBUG: Salida de comandos: 
+SW18#
+SW18#
+SW18#
+SW18#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW18(config)#
+SW18(config)#
+SW18(config)#interface Et0/0
+SW18(config-if)#
+SW18(config-if)#switchport mode access
+SW18(config-if)#
+SW18(config-if)#switchport access vlan 65
+SW18(config-if)#
+SW18(config-if)#no shutdown
+SW18(config-if)#
+SW18(config-if)#exit
+SW18(config
+SW18(config)#
+SW18(config)#
+SW18(config)#end
+SW18#
+2024-11-19 15:59:35,415 INFO: Guardando configuración en switch 192.168.100.121
+2024-11-19 15:59:39,882 DEBUG: Salida de guardar configuración: 
+
+SW18#
+SW18#write memory
+Building configuration...
+Compressed configuration from 1249 bytes to 898 bytes[OK]
+SW18#
+SW18#
+*Nov 19 19:59:36.386: %SYS-5-CONFIG_I: Configured from console by console
+2024-11-19 15:59:40,026 INFO: VLAN 65 asignada al puerto Et0/0 en switch 192.168.100.121
+2024-11-19 15:59:59,604 INFO: Enviando comandos al switch 192.168.100.121: ['interface Et0/3', 'switchport mode trunk', 'switchport trunk allowed vlan add 65', 'no shutdown', 'exit']
+2024-11-19 16:00:00,627 DEBUG: Salida de comandos: 
+SW18#
+SW18#
+SW18#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW18(config)#
+SW18(config)#
+SW18(config)#interface Et0/3
+SW18(config-if)#
+SW18(config-if)#switchport mode trunk
+Command rejected: An interface whose trunk encapsulation is "Auto" can not be configured to "trunk" mode.
+SW18(config-if)#
+SW18(config-if)#switchport trunk allowed vlan add 65
+SW18(config-if)#
+SW18(config-if)#no shutdown
+SW18(config-if)#
+SW18(config-if)#exit
+SW18(config
+SW18(config)#
+SW18(config)#
+SW18(config)#end
+SW18#
+2024-11-19 16:00:00,627 INFO: Guardando configuración en switch 192.168.100.121
+2024-11-19 16:00:05,094 DEBUG: Salida de guardar configuración: 
+
+SW18#
+SW18#write memory
+Building configuration...
+Compressed configuration from 1249 bytes to 898 bytes[OK]
+SW18#
+SW18#
+*Nov 19 20:00:01.588: %SYS-5-CONFIG_I: Configured from console by console
+2024-11-19 16:00:05,237 INFO: VLAN 65 asignada al puerto Et0/3 en switch 192.168.100.121
+2024-11-19 16:00:34,793 INFO: Enviando comandos al switch 192.168.100.121: ['interface Et0/0', 'switchport mode trunk', 'switchport trunk allowed vlan add 1', 'no shutdown', 'exit']
+2024-11-19 16:00:35,785 DEBUG: Salida de comandos: 
+SW18#
+SW18#
+SW18#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW18(config)#
+SW18(config)#
+SW18(config)#interface Et0/0
+SW18(config-if)#
+SW18(config-if)#switchport mode trunk
+Command rejected: An interface whose trunk encapsulation is "Auto" can not be configured to "trunk" mode.
+SW18(config-if)#
+SW18(config-if)#switchport trunk allowed vlan add 1
+SW18(config-if)#
+SW18(config-if)#no shutdown
+SW18(config-if)#
+SW18(config-if)#exit
+SW18(config
+SW18(config)#
+SW18(config)#
+SW18(config)#end
+SW18#
+2024-11-19 16:00:35,785 INFO: Guardando configuración en switch 192.168.100.121
+2024-11-19 16:00:40,251 DEBUG: Salida de guardar configuración: 
+
+SW18#
+SW18#write memory
+Building configuration...
+Compressed configuration from 1249 bytes to 898 bytes[OK]
+SW18#
+SW18#
+*Nov 19 20:00:36.756: %SYS-5-CONFIG_I: Configured from console by console
+2024-11-19 16:00:40,395 INFO: VLAN 1 asignada al puerto Et0/0 en switch 192.168.100.121
+2024-11-19 16:03:59,634 INFO: VLAN 121 - clases agregada en switch 192.168.100.121
+2024-11-19 16:04:15,166 INFO: Enviando comandos al switch 192.168.100.121: ['interface Et0/0', 'switchport mode trunk', 'switchport trunk allowed vlan add 121', 'no shutdown', 'exit']
+2024-11-19 16:04:16,379 DEBUG: Salida de comandos: 
+SW18#
+SW18#
+SW18#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW18(config)#
+SW18(config)#
+SW18(config)#interface Et0/0
+SW18(config-if)#
+SW18(config-if)#switchport mode trunk
+Command rejected: An interface whose trunk encapsulation is "Auto" can not be configured to "trunk" mode.
+SW18(config-if)#
+SW18(config-if)#switchport trunk allowed vlan add 121
+SW18(config-if)#
+SW18(config-if)#no shutdown
+SW18(config-if)#
+SW18(config-if)#exit
+SW18(config
+SW18(config)#
+SW18(config)#
+SW18(config)#end
+SW18#
+2024-11-19 16:04:16,379 INFO: Guardando configuración en switch 192.168.100.121
+2024-11-19 16:04:20,836 DEBUG: Salida de guardar configuración: 
+
+SW18#
+SW18#write memory
+Building configuration...
+Compressed configuration from 1293 bytes to 934 bytes[OK]
+SW18#
+SW18#
+*Nov 19 20:04:17.342: %SYS-5-CONFIG_I: Configured from console by console
+2024-11-19 16:04:21,193 INFO: VLAN 121 asignada al puerto Et0/0 en switch 192.168.100.121
+2024-11-19 16:04:47,256 INFO: Enviando comandos al switch 192.168.100.121: ['interface Et0/0', 'switchport mode access', 'switchport access vlan 121', 'no shutdown', 'exit']
+2024-11-19 16:04:48,317 DEBUG: Salida de comandos: 
+SW18#
+SW18#
+SW18#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW18(config)#
+SW18(config)#
+SW18(config)#interface Et0/0
+SW18(config-if)#
+SW18(config-if)#switchport mode access
+SW18(config-if)#
+SW18(config-if)#switchport access vlan 121
+SW18(config-if)#
+SW18(config-if)#no shutdown
+SW18(config-if)#
+SW18(config-if)#exit
+SW18(config
+SW18(config)#
+SW18(config)#
+SW18(config)#end
+SW18#
+2024-11-19 16:04:48,317 INFO: Guardando configuración en switch 192.168.100.121
+2024-11-19 16:04:52,795 DEBUG: Salida de guardar configuración: 
+
+SW18#
+SW18#write memory
+Building configuration...
+Compressed configuration from 1294 bytes to 936 bytes[OK]
+SW18#
+SW18#
+*Nov 19 20:04:49.280: %SYS-5-CONFIG_I: Configured from console by console
+2024-11-19 16:04:52,938 INFO: VLAN 121 asignada al puerto Et0/0 en switch 192.168.100.121
+2024-11-19 16:05:24,455 INFO: Enviando comandos al switch 192.168.100.121: ['interface Et0/2', 'switchport mode access', 'switchport access vlan 121', 'no shutdown', 'exit']
+2024-11-19 16:05:25,495 DEBUG: Salida de comandos: 
+SW18#
+SW18#
+SW18#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW18(config)#
+SW18(config)#
+SW18(config)#interface Et0/2
+SW18(config-if)#
+SW18(config-if)#switchport mode access
+SW18(config-if)#
+SW18(config-if)#switchport access vlan 121
+SW18(config-if)#
+SW18(config-if)#no shutdown
+SW18(config-if)#
+SW18(config-if)#exit
+SW18(config
+SW18(config)#
+SW18(config)#
+SW18(config)#end
+SW18#
+2024-11-19 16:05:25,495 INFO: Guardando configuración en switch 192.168.100.121
+2024-11-19 16:05:29,963 DEBUG: Salida de guardar configuración: 
+
+SW18#
+SW18#write memory
+Building configuration...
+Compressed configuration from 1346 bytes to 959 bytes[OK]
+SW18#
+SW18#
+*Nov 19 20:05:26.469: %SYS-5-CONFIG_I: Configured from console by console
+2024-11-19 16:05:30,105 INFO: VLAN 121 asignada al puerto Et0/2 en switch 192.168.100.121
+2024-11-19 16:12:53,126 INFO: Aplicación iniciada
+2024-11-19 16:13:32,800 INFO: VLAN 65 - Santiago agregada en switch 192.168.100.121
+2024-11-19 16:13:53,949 INFO: Enviando comandos al switch 192.168.100.121: ['interface Et0/0', 'switchport trunk encapsulation dot1q', 'switchport mode trunk', 'switchport trunk allowed vlan add 65', 'no shutdown', 'exit']
+2024-11-19 16:13:55,063 DEBUG: Salida de comandos: 
+SW18#
+SW18#
+SW18#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW18(config)#
+SW18(config)#
+SW18(config)#interface Et0/0
+SW18(config-if)#
+SW18(config-if)#switchport trunk encapsulation dot1q
+SW18(config-if)#
+SW18(config-if)#switchport mode trunk
+SW18(config-if)#
+SW18(config-if)#switchport trunk allowed vlan add 65
+SW18(config-if)#
+SW18(config-if)#no shutdown
+SW18(config-if)#
+SW18(config-if)#exit
+SW18(config
+SW18(config)#
+SW18(config)#
+SW18(config)#end
+SW18#
+2024-11-19 16:13:55,063 INFO: Guardando configuración en switch 192.168.100.121
+2024-11-19 16:13:59,520 DEBUG: Salida de guardar configuración: 
+
+SW18#
+SW18#write memory
+Building configuration...
+Compressed configuration from 1453 bytes to 999 bytes[OK]
+SW18#
+SW18#
+*Nov 19 20:13:56.040: %SYS-5-CONFIG_I: Configured from console by console
+*Nov 19 20:13:56.688: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/0, changed state to down
+2024-11-19 16:13:59,663 INFO: VLAN 65 asignada al puerto Et0/0 en switch 192.168.100.121
+2024-11-19 16:14:36,676 INFO: Aplicación iniciada
+2024-11-19 16:15:23,437 INFO: Enviando comandos al switch 192.168.100.121: ['interface Et0/2', 'switchport mode access', 'switchport access vlan 65', 'no shutdown', 'exit']
+2024-11-19 16:15:24,430 DEBUG: Salida de comandos: 
+SW18#
+SW18#
+SW18#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW18(config)#
+SW18(config)#
+SW18(config)#interface Et0/2
+SW18(config-if)#
+SW18(config-if)#switchport mode access
+SW18(config-if)#
+SW18(config-if)#switchport access vlan 65
+SW18(config-if)#
+SW18(config-if)#no shutdown
+SW18(config-if)#
+SW18(config-if)#exit
+SW18(config
+SW18(config)#
+SW18(config)#
+SW18(config)#end
+SW18#
+2024-11-19 16:15:24,430 INFO: Guardando configuración en switch 192.168.100.121
+2024-11-19 16:15:28,888 DEBUG: Salida de guardar configuración: 
+
+SW18#
+SW18#write memory
+Building configuration...
+Compressed configuration from 1452 bytes to 999 bytes[OK]
+SW18#
+SW18#
+*Nov 19 20:15:25.407: %SYS-5-CONFIG_I: Configured from console by console
+2024-11-19 16:15:29,031 INFO: VLAN 65 asignada al puerto Et0/2 en switch 192.168.100.121
+2024-11-19 16:26:23,721 INFO: Enviando comandos al switch 192.168.100.121: ['interface Et0/3', 'switchport trunk encapsulation dot1q', 'switchport mode trunk', 'switchport trunk allowed vlan add 121', 'no shutdown', 'exit']
+2024-11-19 16:26:24,854 DEBUG: Salida de comandos: 
+SW18#
+SW18#
+SW18#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW18(config)#
+SW18(config)#
+SW18(config)#interface Et0/3
+SW18(config-if)#
+SW18(config-if)#switchport trunk encapsulation dot1q
+SW18(config-if)#
+SW18(config-if)#switchport mode trunk
+SW18(config-if)#
+SW18(config-if)#switchport trunk allowed vlan add 121
+SW18(config-if)#
+SW18(config-if)#no shutdown
+SW18(config-if)#
+SW18(config-if)#exit
+SW18(config
+SW18(config)#
+SW18(config)#
+SW18(config)#end
+SW18#
+2024-11-19 16:26:24,854 INFO: Guardando configuración en switch 192.168.100.121
+2024-11-19 16:26:29,361 DEBUG: Salida de guardar configuración: 
+
+SW18#
+SW18#write memory
+Building configuration...
+Compressed configuration from 1475 bytes to 1008 bytes[OK]
+SW18#
+SW18#
+*Nov 19 20:26:25.835: %SYS-5-CONFIG_I: Configured from console by console
+*Nov 19 20:26:26.480: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/3, changed state to down
+2024-11-19 16:26:29,504 INFO: VLAN 121 asignada al puerto Et0/3 en switch 192.168.100.121
+2024-11-19 16:37:45,500 INFO: Aplicación iniciada
+2024-11-19 16:38:07,026 INFO: Aplicación iniciada
+2024-11-19 16:38:07,190 INFO: Aplicación iniciada
+2024-11-19 16:39:10,327 INFO: Enviando comandos al switch 192.168.100.121: ['interface Et0/0', 'switchport trunk encapsulation dot1q', 'switchport mode trunk', 'switchport trunk allowed vlan add 65', 'no shutdown', 'exit']
+2024-11-19 16:39:11,383 DEBUG: Salida de comandos: 
+
+SW18#
+SW18#
+SW18#
+SW18#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW18(config)#
+SW18(config)#
+SW18(config)#interface Et0/0
+SW18(config-if)#
+SW18(config-if)#switchport trunk encapsulation dot1q
+SW18(config-if)#
+SW18(config-if)#switchport mode trunk
+SW18(config-if)#
+SW18(config-if)#switchport trunk allowed vlan add 65
+SW18(config-if)#
+SW18(config-if)#no shutdown
+SW18(config-if)#
+SW18(config-if)#exit
+SW18(config
+SW18(config)#
+SW18(config)#
+SW18(config)#end
+SW18#
+2024-11-19 16:39:11,384 INFO: Guardando configuración en switch 192.168.100.121
+2024-11-19 16:39:15,890 DEBUG: Salida de guardar configuración: 
+
+SW18#
+SW18#write memory
+Building configuration...
+Compressed configuration from 1475 bytes to 1007 bytes[OK]
+SW18#
+SW18#
+*Nov 19 20:39:12.369: %SYS-5-CONFIG_I: Configured from console by console
+2024-11-19 16:39:16,044 INFO: VLAN 65 asignada al puerto Et0/0 en switch 192.168.100.121
+2024-11-19 16:44:03,762 INFO: Aplicación iniciada
+2024-11-19 16:44:03,949 INFO: Aplicación iniciada
+2024-11-19 16:44:36,214 INFO: VLAN 179 - oficina agregada en switch 192.168.100.121
+2024-11-19 16:45:00,861 INFO: Enviando comandos al switch 192.168.100.121: ['interface Et0/1', 'switchport trunk encapsulation dot1q', 'switchport mode trunk', 'switchport trunk allowed vlan add 179', 'no shutdown', 'exit']
+2024-11-19 16:45:02,494 DEBUG: Salida de comandos: 
+SW18#
+SW18#
+SW18#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW18(config)#
+SW18(config)#
+SW18(config)#interface Et0/1
+SW18(config-if)#
+SW18(config-if)#switchport trunk encapsulation dot1q
+SW18(config-if)#
+SW18(config-if)#switchport mode trunk
+SW18(config-if)#
+SW18(config-if)#switchport trunk allowed vlan add 179
+SW18(config-if)#
+SW18(config-if)#no shutdown
+SW18(config-if)#
+SW18(config-if)#exit
+SW18(config
+SW18(config)#
+SW18(config)#
+SW18(config)#end
+SW18#
+2024-11-19 16:45:02,494 INFO: Guardando configuración en switch 192.168.100.121
+2024-11-19 16:45:07,101 DEBUG: Salida de guardar configuración: 
+
+SW18#
+SW18#write memory
+Building configuration...
+Compressed configuration from 1470 bytes to 1002 bytes[OK]
+SW18#
+SW18#
+*Nov 19 20:45:03.483: %SYS-5-CONFIG_I: Configured from console by console
+2024-11-19 16:45:07,244 INFO: VLAN 179 asignada al puerto Et0/1 en switch 192.168.100.121
+2024-11-19 16:47:37,878 INFO: Aplicación iniciada
+2024-11-19 16:47:58,604 INFO: Enviando comandos al switch 192.168.100.121: ['interface Et0/2', 'switchport trunk encapsulation dot1q', 'switchport mode trunk', 'switchport trunk allowed vlan add 65', 'no shutdown', 'exit']
+2024-11-19 16:47:59,738 DEBUG: Salida de comandos: 
+SW18#
+SW18#
+SW18#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW18(config)#
+SW18(config)#
+SW18(config)#interface Et0/2
+SW18(config-if)#
+SW18(config-if)#switchport trunk encapsulation dot1q
+SW18(config-if)#
+SW18(config-if)#switchport mode trunk
+SW18(config-if)#
+SW18(config-if)#switchport trunk allowed vlan add 65
+SW18(config-if)#
+SW18(config-if)#no shutdown
+SW18(config-if)#
+SW18(config-if)#exit
+SW18(config
+SW18(config)#
+SW18(config)#
+SW18(config)#end
+SW18#
+2024-11-19 16:47:59,738 INFO: Guardando configuración en switch 192.168.100.121
+2024-11-19 16:48:04,245 DEBUG: Salida de guardar configuración: 
+
+SW18#
+SW18#write memory
+Building configuration...
+Compressed configuration from 1470 bytes to 1002 bytes[OK]
+SW18#
+SW18#
+*Nov 19 20:48:00.717: %SYS-5-CONFIG_I: Configured from console by console
+2024-11-19 16:48:04,388 INFO: VLAN 65 asignada al puerto Et0/2 en switch 192.168.100.121
+2024-11-19 16:48:57,868 INFO: Enviando comandos al switch 192.168.100.121: ['interface e0/1', 'switchport trunk encapsulation dot1q', 'switchport mode trunk', 'switchport trunk allowed vlan add 65', 'no shutdown', 'exit']
+2024-11-19 16:48:58,898 DEBUG: Salida de comandos: 
+SW18#
+SW18#
+SW18#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW18(config)#
+SW18(config)#
+SW18(config)#interface e0/1
+SW18(config-if)#
+SW18(config-if)#switchport trunk encapsulation dot1q
+SW18(config-if)#
+SW18(config-if)#switchport mode trunk
+SW18(config-if)#
+SW18(config-if)#switchport trunk allowed vlan add 65
+SW18(config-if)#
+SW18(config-if)#no shutdown
+SW18(config-if)#
+SW18(config-if)#exit
+SW18(config
+SW18(config)#
+SW18(config)#
+SW18(config)#end
+SW18#
+2024-11-19 16:48:58,899 INFO: Guardando configuración en switch 192.168.100.121
+2024-11-19 16:49:03,405 DEBUG: Salida de guardar configuración: 
+
+SW18#
+SW18#write memory
+Building configuration...
+Compressed configuration from 1470 bytes to 1002 bytes[OK]
+SW18#
+SW18#
+*Nov 19 20:48:59.878: %SYS-5-CONFIG_I: Configured from console by console
+2024-11-19 16:49:03,548 INFO: VLAN 65 asignada al puerto e0/1 en switch 192.168.100.121
+2024-11-19 20:40:22,049 INFO: Aplicación iniciada
+2024-11-19 20:40:22,246 INFO: Aplicación iniciada
+2024-11-19 20:42:22,883 ERROR: Error al obtener VLANs de 192.168.100.121: 
+
+Pattern not detected: 'terminal\\ length\\ 0' in output.
+
+Things you might try to fix this:
+1. Adjust the regex pattern to better identify the terminating string. Note, in
+many situations the pattern is automatically based on the network device's prompt.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+
+2024-11-19 20:46:33,932 INFO: Aplicación iniciada
+2024-11-19 20:47:10,596 INFO: Aplicación iniciada
+2024-11-19 20:47:10,757 INFO: Aplicación iniciada
+2024-11-19 20:47:56,286 INFO: Enviando comandos al switch 192.168.100.121: ['interface Ethernet0/0', 'switchport trunk encapsulation dot1q', 'switchport mode trunk', 'switchport trunk allowed vlan add 65', 'no shutdown', 'exit']
+2024-11-19 20:47:57,716 DEBUG: Salida de comandos: 
+SW18#
+SW18#
+SW18#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW18(config)#
+
+SW18(config)#
+SW18(config)#interface Ethernet0/0
+SW18(config-if)#
+SW18(config-if)#switchport trunk encapsulation dot1q
+SW18(config-if)#
+SW18(config-if)#switchport mode trunk
+SW18(config-if)#
+SW18(config-if)#switchport trunk allowed vlan add 65
+SW18(config-if)#
+SW18(config-if)#no shutdown
+SW18(config-if)#
+SW18(config-if)#exit
+SW18(config)#
+
+SW18(config)#
+SW18(config)#end
+SW18#
+2024-11-19 20:47:57,716 INFO: Guardando configuración en switch 192.168.100.121
+2024-11-19 20:48:01,717 INFO: Enviando comandos al switch 192.168.100.121: ['interface Ethernet0/0', 'switchport trunk encapsulation dot1q', 'switchport mode trunk', 'switchport trunk allowed vlan add 65', 'no shutdown', 'exit']
+2024-11-19 20:48:05,761 DEBUG: Salida de comandos: 
+SW18#
+SW18#
+SW18#
+SW18#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW18(config)#
+SW18(config)#
+SW18(config)#interface Ethernet0/0
+SW18(config-if)#
+SW18(config-if)#switchport trunk encapsulation dot1q
+SW18(config-if)#
+SW18(config-if)#switchport mode trunk
+SW18(config-if)#
+SW18(config-if)#switchport trunk allowed vlan add 65
+SW18(config-if)#
+SW18(config-if)#no shutdown
+SW18(config-if)#
+SW18(config-if)#exit
+SW18(config
+SW18(config)#
+SW18(config)#
+SW18(config)#end
+SW18#
+2024-11-19 20:48:05,762 INFO: Guardando configuración en switch 192.168.100.121
+2024-11-19 20:48:08,430 DEBUG: Salida de guardar configuración: 
+SW18#
+SW18#write memory
+Building configuration...
+Compressed configuration from 1470 bytes to 1002 bytes[OK]
+SW18#
+SW18#
+*Nov 20 00:47:58.589: %SYS-5-CONFIG_I: Configured from console by console
+SW18#
+SW18#
+SW18#
+SW18#
+SW18#terminal width 511
+SW18#
+SW18#terminal length 0
+SW18#
+SW18#
+SW18#
+SW18#
+SW18#
+SW18#
+SW18#
+SW18#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW18(config)#
+SW18(config)#
+SW18(config)#
+SW18(config)#interface Ethernet0/0
+SW18(config-if)#
+SW18(config-if)#switchport trunk encapsulation dot1q
+SW18(config-if)#
+SW18(config-if)#switchport mode trunk
+SW18(config-if)#
+SW18(config-if)#switchport trunk allowed vlan add 65
+SW18(config-if)#
+SW18(config-if)#no shutdown
+SW18(config-if)#
+SW18(config-if)#exit
+SW18(config)#
+SW18(config)#
+SW18(config)#
+SW18(config)#end
+SW18#
+SW18#
+*Nov 20 00:48:04.766: %SYS-5-CONFIG_I: Configured from console by console
+SW18#
+SW18#
+SW18#write memory
+Building configuration...
+Compressed configuration from 1470 bytes to 1000 bytes[OK]
+SW18#
+2024-11-19 20:48:08,522 INFO: VLAN 65 asignada al puerto Ethernet0/0 en switch 192.168.100.121
+2024-11-19 20:48:12,170 DEBUG: Salida de guardar configuración: 
+*Nov 20 00:48:04.766: %SYS-5-CONFIG_I: Configured from console by console
+SW18#
+SW18#
+SW18#write memory
+Building configuration...
+Compressed configuration from 1470 bytes to 1000 bytes[OK]
+SW18#
+SW18#
+SW18#
+SW18#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SW18 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+2024-11-19 20:48:12,547 INFO: VLAN 65 asignada al puerto Ethernet0/0 en switch 192.168.100.121
+2024-11-19 20:50:02,116 INFO: VLAN 7 - UNE_COMUNICACIOENS agregada en switch 192.168.100.121
+2024-11-20 09:46:25,946 INFO: Aplicación iniciada
+2024-11-20 09:46:26,132 INFO: Aplicación iniciada
+2024-11-20 09:47:10,241 INFO: VLAN 89 - cocina agregada en switch 192.168.100.121
+2024-11-20 09:54:32,039 INFO: Aplicación iniciada
+2024-11-20 09:55:38,737 INFO: Aplicación iniciada
+2024-11-20 09:55:38,888 INFO: Aplicación iniciada
+2024-11-20 10:04:13,987 INFO: Aplicación iniciada
+2024-11-20 10:04:14,131 INFO: Aplicación iniciada
+2024-11-20 10:10:44,860 INFO: Aplicación iniciada
+2024-11-20 10:10:45,014 INFO: Aplicación iniciada
+2024-11-20 10:14:07,900 INFO: Aplicación iniciada
+2024-11-20 10:15:27,403 INFO: Aplicación iniciada
+2024-11-20 10:24:25,026 INFO: Enviando comandos al switch 192.168.100.121: ['interface Ethernet0/3', 'switchport mode access', 'switchport access vlan 121', 'no shutdown', 'exit']
+2024-11-20 10:24:25,975 DEBUG: Salida de comandos: 
+SW18#
+SW18#
+SW18#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW18(config)#
+SW18(config)#
+SW18(config)#interface Ethernet0/3
+SW18(config-if)#
+SW18(config-if)#switchport mode access
+SW18(config-if)#
+SW18(config-if)#switchport access vlan 121
+SW18(config-if)#
+SW18(config-if)#no shutdown
+SW18(config-if)#
+SW18(config-if)#exit
+SW18(config
+SW18(config)#
+SW18(config)#
+SW18(config)#end
+SW18#
+2024-11-20 10:24:25,975 INFO: Guardando configuración en switch 192.168.100.121
+2024-11-20 10:24:30,480 DEBUG: Salida de guardar configuración: 
+
+SW18#
+SW18#write memory
+Building configuration...
+Compressed configuration from 1499 bytes to 1015 bytes[OK]
+SW18#
+SW18#
+*Nov 20 14:24:25.856: %SYS-5-CONFIG_I: Configured from console by console
+2024-11-20 10:24:30,623 INFO: VLAN 121 asignada al puerto Ethernet0/3 en switch 192.168.100.121
+2024-11-20 10:34:56,359 INFO: Aplicación iniciada
+2024-11-20 10:34:56,518 INFO: Aplicación iniciada
+2024-11-20 10:36:18,974 INFO: Aplicación iniciada
+2024-11-20 10:49:36,290 INFO: Aplicación iniciada
+2024-11-20 10:49:36,450 INFO: Aplicación iniciada
+2024-11-20 10:51:52,247 ERROR: Error al agregar VLAN en 192.168.100.121: BaseConnection.__init__() got an unexpected keyword argument 'hostname'
+2024-11-20 10:54:40,680 INFO: Aplicación iniciada
+2024-11-20 10:55:24,020 INFO: Aplicación iniciada
+2024-11-20 10:55:43,867 INFO: Aplicación iniciada
+2024-11-20 10:55:52,447 INFO: Aplicación iniciada
+2024-11-20 10:55:52,631 INFO: Aplicación iniciada
+2024-11-20 10:56:12,932 ERROR: Error al agregar VLAN en 192.168.100.121: BaseConnection.__init__() got an unexpected keyword argument 'hostname'
+2024-11-20 10:56:20,729 ERROR: Error al agregar VLAN en 192.168.100.121: BaseConnection.__init__() got an unexpected keyword argument 'hostname'
+2024-11-20 10:56:33,000 ERROR: Error al agregar VLAN en 192.168.100.121: BaseConnection.__init__() got an unexpected keyword argument 'hostname'
+2024-11-20 10:57:08,631 ERROR: Error al agregar VLAN en 192.168.100.121: BaseConnection.__init__() got an unexpected keyword argument 'hostname'
+2024-11-20 10:57:48,646 ERROR: Error al agregar VLAN en 192.168.100.121: BaseConnection.__init__() got an unexpected keyword argument 'hostname'
+2024-11-20 10:58:36,425 INFO: Aplicación iniciada
+2024-11-20 10:58:36,587 INFO: Aplicación iniciada
+2024-11-20 10:58:43,430 INFO: Aplicación iniciada
+2024-11-20 10:58:43,618 INFO: Aplicación iniciada
+2024-11-20 10:59:22,492 INFO: VLAN 2 - Casa agregada en switch 192.168.100.121
+2024-11-20 10:59:43,175 INFO: Enviando comandos al switch 192.168.100.121: ['interface Ethernet0/0', 'switchport mode access', 'switchport access vlan 2', 'no shutdown', 'exit']
+2024-11-20 10:59:44,625 DEBUG: Salida de comandos: 
+SW18#
+SW18#
+SW18#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW18(config)#
+
+SW18(config)#
+SW18(config)#interface Ethernet0/0
+SW18(config-if)#
+SW18(config-if)#switchport mode access
+SW18(config-if)#
+SW18(config-if)#switchport access vlan 2
+SW18(config-if)#
+SW18(config-if)#no shutdown
+SW18(config-if)#
+SW18(config-if)#exit
+SW18(config)#
+
+SW18(config)#
+SW18(config)#end
+SW18#
+2024-11-20 10:59:44,626 INFO: Guardando configuración en switch 192.168.100.121
+2024-11-20 10:59:49,132 DEBUG: Salida de guardar configuración: 
+
+SW18#
+SW18#write memory
+Building configuration...
+Compressed configuration from 1498 bytes to 1013 bytes[OK]
+SW18#
+SW18#
+*Nov 20 14:59:44.545: %SYS-5-CONFIG_I: Configured from console by console
+2024-11-20 10:59:49,265 INFO: VLAN 2 asignada al puerto Ethernet0/0 en switch 192.168.100.121
+2024-11-20 11:00:12,302 INFO: Aplicación iniciada
+2024-11-20 11:00:12,452 INFO: Aplicación iniciada
+2024-11-20 11:01:31,090 INFO: Aplicación iniciada
+2024-11-20 11:01:31,233 INFO: Aplicación iniciada
+2024-11-27 20:37:15,993 INFO: Aplicación iniciada
+2024-11-27 20:37:17,775 INFO: Aplicación iniciada
+2024-11-27 20:39:20,973 ERROR: Error al agregar VLAN en 192.168.100.121: [Errno 113] No route to host
+2024-11-27 20:41:20,501 INFO: VLAN 74 - administracion agregada en switch 192.168.100.121
+2024-11-27 20:45:31,441 INFO: Aplicación iniciada
+2024-11-27 20:45:33,455 INFO: Aplicación iniciada
+2024-11-28 19:02:18,613 INFO: Aplicación iniciada
+2024-11-28 19:02:20,436 INFO: Aplicación iniciada

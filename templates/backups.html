@@ -1,0 +1,20 @@
+<!-- templates/backups.html -->
+{% extends "base.html" %}
+
+{% block title %}Backups - Gestión de VLANs{% endblock %}
+
+{% block content %}
+<h2>Backups de Configuración</h2>
+{% if backup_files %}
+    <ul class="list-group">
+        {% for file in backup_files %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                {{ file }}
+                <a href="{{ url_for('download_backup', filename=file) }}" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i> Descargar</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay backups disponibles.</p>
+{% endif %}
+{% endblock %}

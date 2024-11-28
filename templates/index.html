@@ -1,0 +1,12 @@
+<!-- templates/index.html -->
+{% extends "base.html" %}
+
+{% block title %}Inicio - Gestión de VLANs{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1>Bienvenido a la Gestión de VLANs</h1>
+    <p class="lead">Automatiza la creación y asignación de VLANs en tus switches Cisco de manera fácil y eficiente.</p>
+    <a href="{{ url_for('vlans') }}" class="btn btn-primary btn-lg"><i class="bi bi-diagram-3"></i> Ver VLANs</a>
+</div>
+{% endblock %}

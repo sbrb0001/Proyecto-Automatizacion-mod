@@ -1,0 +1,10 @@
+[
+    {
+      "device_type": "cisco_ios_telnet",
+      "host": "192.168.100.121",
+      "username": "nrll0001",
+      "password": "1234",
+      "secret": "1234",
+      "port": 33298
+    }
+  ]

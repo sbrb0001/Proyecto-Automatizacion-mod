@@ -1,0 +1,5 @@
+## Nornir Defaults File
+---
+platform: cisco_ios_telnet
+username: cisco
+password: cisco

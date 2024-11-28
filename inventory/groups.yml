@@ -1,0 +1,26 @@
+---
+Switches:  # Configuración para los switches
+  data: 
+    ntp:  
+      servers:  # Lista de servidores NTP a utilizar
+        - 2.2.2.2 # servidor NTP de Cloudflare, conocido por su alta disponibilidad
+        - 1.pool.ntp.org  # Otro servidor del pool NTP para redundancia
+
+Scarlett:
+  username: "scarlett" # para autenticar en el router emulado en EVE-NG
+  password: "br*v*" # Contraseña para acceder al router
+  platform: "cisco_ios_telnet" # Plataforma del dispositivo
+
+Nelson:
+  username: "nrll0001"
+  password: "1234"
+  platform: "cisco_ios_telnet" # Plataforma del dispositivo
+
+connection_options: #
+  telnet: # Sección para configurar detalles específicos de Telnet
+    port: 23 # Puerto común para conexiones Telnet, por defecto 23
+    extras: # Parámetros adicionales para Telnet
+      open_cmd: telnet # Comando para abrir la conexión Telnet
+
+
+

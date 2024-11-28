@@ -1,0 +1,12 @@
+---
+inventory: # Se utilizará para gestionar el inventario de dispositivos
+  plugin: SimpleInventory
+  options: 
+    host_file: "./inventory/hosts.yml"
+    group_file: "./inventory/groups.yml"
+    defaults_file: "./inventory/defaults.yml"
+
+runner: # Se utiliza para ejecutar tareas en los dispositivos de forma simultánea
+  plugin: threaded
+  options:
+    num_workers: 100  # Configura la cantidad de hilos para utilizar en paralelo
